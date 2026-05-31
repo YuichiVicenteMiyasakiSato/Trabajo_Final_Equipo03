@@ -1,0 +1,29 @@
+############################################################################
+#  Salida de src/analisis.py sobre el dataset
+############################################################################
+
+========================================================================
+ RESULTADOS DEL PIPELINE 
+========================================================================
+
+[EXP 1] Detección de tickers (validación, n=1000) — CÁLCULO REAL
+  Regex simple             TP= 479 FP= 349 FN=  83 | P=0.58 R=0.85 F1=0.69
+  Detector reglas (NER)    TP= 494 FP=  66 FN=  68 | P=0.88 R=0.88 F1=0.88
+
+[EXP 2] Clasificación de sentimiento (5-fold CV, n=2400)
+  VADER-léxico   P(bull)=0.61 R(bull)=0.36 F1(bull)=0.46 F1_macro=0.49
+  SVM + TF-IDF   P(bull)=0.74 R(bull)=0.72 F1(bull)=0.73 F1_macro=0.74
+  FinBERT        P(bull)=0.77 R(bull)=0.79 F1(bull)=0.78 F1_macro=0.79  (SIMULADO)
+
+[EXP 3] Correlación de Pearson ISN vs retorno — CÁLCULO REAL
+  (solo días con >=30 publicaciones del ticker)
+  GME  lag=1d  r=+0.45  p=0.000  n=171  signif=Sí
+  GME  lag=2d  r=+0.23  p=0.003  n=170  signif=Sí
+  GME  lag=3d  r=+0.12  p=0.108  n=169  signif=No
+  AMC  lag=1d  r=+0.33  p=0.000  n=171  signif=Sí
+  AMC  lag=2d  r=+0.14  p=0.078  n=170  signif=No
+  AMC  lag=3d  r=+0.07  p=0.351  n=169  signif=No
+
+  Robustez GME (sin squeeze ene): r=+0.38 p=0.000 n=156
+========================================================================
+Tabla diaria de ISN exportada: datos/isn_diario_SIMULADO.csv
