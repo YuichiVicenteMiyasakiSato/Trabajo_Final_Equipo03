@@ -8,8 +8,6 @@
   <img src="https://img.shields.io/badge/Python-3.11-3776AB?logo=python&logoColor=white">
   <img src="https://img.shields.io/badge/scikit--learn-1.3-F7931E?logo=scikitlearn&logoColor=white">
   <img src="https://img.shields.io/badge/pandas-2.0-150458?logo=pandas&logoColor=white">
-  <img src="https://img.shields.io/badge/datos-SIMULADOS-orange">
-  <img src="https://img.shields.io/badge/licencia-MIT-green">
 </p>
 
 <p align="center">
